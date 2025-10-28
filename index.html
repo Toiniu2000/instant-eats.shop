@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INSTANT EATS — Transformez votre vie maintenant ! 🚀</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+'cartoon-blue': '#00D4FF',
+'cartoon-pink': '#FF6B9D',
+'cartoon-purple': '#A855F7',
+'cartoon-yellow': '#FFD93D',
+'cartoon-green': '#6BCF7F',
+'cartoon-orange': '#FF8E53',
+},
+fontFamily: {
+'main': ['Poppins', 'system-ui', 'sans-serif'],
+}
+}
+}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+font-family: 'Poppins', system-ui, sans-serif;
+}
+
+body {
+background: linear-gradient(180deg, #FFF5F7 0%, #F0F9FF 50%, #FAF5FF 100%);
+}
+
+/* Promo Banner Cartoon */
+.promo-banner {
+background: linear-gradient(135deg, #FF6B9D 0%, #FFD93D 50%, #00D4FF 100%);
+animation: gradientShift 5s ease infinite;
+background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+/* Cartoon Card Enhanced */
+.cartoon-card {
+background: white;
+border: 6px solid #000;
+box-shadow: 10px 10px 0 #000;
+transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+position: relative;
+}
+
+.cartoon-card::before {
+content: '';
+position: absolute;
+top: -3px;
+left: -3px;
+right: -3px;
+bottom: -3px;
+background: linear-gradient(45deg, #FF6B9D, #FFD93D, #00D4FF, #A855F7);
+border-radius: inherit;
+z-index: -1;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.cartoon-card:hover::before {
+opacity: 0.3;
+}
+
+.cartoon-card:hover {
+transform: translateY(-12px) rotate(-2deg);
+box-shadow: 15px 15px 0 #000;
+}
+
+/* Big Cartoon Button with Enhanced Effect */
+.mega-btn {
+background: linear-gradient(135deg, #FF6B9D 0%, #A855F7 100%);
+border: 6px solid #000;
+box-shadow: 8px 8px 0 #000;
+font-size: 1.25rem;
+font-weight: 900;
+text-transform: uppercase;
+transition: all 0.3s ease;
+position: relative;
+overflow: hidden;
+cursor: pointer;
+white-space: nowrap;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+}
+
+@media (min-width: 768px) {
+.mega-btn {
+font-size: 1.5rem;
+}
+}
+
+.mega-btn::after {
+content: '✨';
+position: absolute;
+font-size: 3rem;
+opacity: 0;
+animation: sparkle 2s infinite;
+right: 10%;
+top: 50%;
+transform: translateY(-50%);
+}
+
+@keyframes sparkle {
+0%, 100% { opacity: 0; transform: translateY(-50%) scale(0) rotate(0deg); }
+50% { opacity: 1; transform: translateY(-50%) scale(1.5) rotate(180deg); }
+}
+
+.mega-btn:hover {
+transform: scale(1.08);
+box-shadow: 12px 12px 0 #000;
+}
+
+.mega-btn:active {
+transform: scale(0.95) translateY(4px);
+box-shadow: 4px 4px 0 #000;
+}
+
+/* Yellow Button Enhanced */
+.yellow-btn {
+background: linear-gradient(135deg, #FFD93D 0%, #FF8E53 100%);
+border: 6px solid #000;
+box-shadow: 8px 8px 0 #000;
+font-size: 1.1rem;
+font-weight: 900;
+transition: all 0.3s ease;
+cursor: pointer;
+white-space: nowrap;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+}
+
+@media (min-width: 768px) {
+.yellow-btn {
+font-size: 1.3rem;
+}
+}
+
+.yellow-btn:hover {
+transform: scale(1.08);
+box-shadow: 12px 12px 0 #000;
+}
+
+.yellow-btn:active {
+transform: scale(0.95) translateY(4px);
+box-shadow: 4px 4px 0 #000;
+}
+
+/* Green Button Enhanced */
+.green-btn {
+background: linear-gradient(135deg, #6BCF7F 0%, #00D4FF 100%);
+border: 6px solid #000;
+box-shadow: 8px 8px 0 #000;
+font-size: 1.1rem;
+font-weight: 900;
+transition: all 0.3s ease;
+cursor: pointer;
+white-space: nowrap;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+}
+
+@media (min-width: 768px) {
+.green-btn {
+font-size: 1.3rem;
+}
+}
+
+.green-btn:hover {
+transform: scale(1.08);
+box-shadow: 12px 12px 0 #000;
+}
+
+.green-btn:active {
+transform: scale(0.95) translateY(4px);
+box-shadow: 4px 4px 0 #000;
+}
+
+/* Orange Button */
+.orange-btn {
+background: linear-gradient(135deg, #FF8E53 0%, #FF6B9D 100%);
+border: 6px solid #000;
+box-shadow: 8px 8px 0 #000;
+font-size: 1.1rem;
+font-weight: 900;
+transition: all 0.3s ease;
+cursor: pointer;
+white-space: nowrap;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+}
+
+@media (min-width: 768px) {
+.orange-btn {
+font-size: 1.3rem;
+}
+}
+
+.orange-btn:hover {
+transform: scale(1.08);
+box-shadow: 12px 12px 0 #000;
+}
+
+.orange-btn:active {
+transform: scale(0.95) translateY(4px);
+box-shadow: 4px 4px 0 #000;
+}
+
+/* Floating Animation Enhanced */
+@keyframes float {
+0%, 100% { transform: translateY(0px) rotate(-5deg); }
+50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+.float-anim {
+animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse Animation Enhanced */
+@keyframes pulse {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.15); }
+}
+
+.pulse-anim {
+animation: pulse 2s ease-in-out infinite;
+}
+
+/* Bounce Animation Enhanced */
+@keyframes bounce {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-25px); }
+}
+
+.bounce-anim {
+animation: bounce 1.5s ease-in-out infinite;
+}
+
+/* Wiggle Animation */
+@keyframes wiggle {
+0%, 100% { transform: rotate(-3deg); }
+50% { transform: rotate(3deg); }
+}
+
+.wiggle-anim {
+animation: wiggle 1s ease-in-out infinite;
+}
+
+/* Cartoon Badge Enhanced */
+.cartoon-badge {
+background: #FFD93D;
+border: 5px solid #000;
+box-shadow: 5px 5px 0 #000;
+display: inline-block;
+padding: 0.75rem 1.5rem;
+font-size: 1.1rem;
+font-weight: 900;
+text-transform: uppercase;
+transform: rotate(-3deg);
+transition: all 0.3s ease;
+}
+
+.cartoon-badge:hover {
+transform: rotate(0deg) scale(1.05);
+}
+
+/* Stats Box Enhanced */
+.stats-box {
+background: white;
+border: 6px solid #000;
+box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+transition: all 0.4s ease;
+}
+
+.stats-box:hover {
+transform: translateY(-8px) rotate(2deg);
+box-shadow: 14px 14px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Formation Card Enhanced */
+.formation-card {
+background: linear-gradient(135deg, #FFF 0%, #F8F9FA 100%);
+border: 6px solid #000;
+box-shadow: 10px 10px 0 #000;
+transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+position: relative;
+overflow: hidden;
+}
+
+.formation-card::after {
+content: '⭐';
+position: absolute;
+font-size: 8rem;
+opacity: 0.05;
+bottom: -20px;
+right: -20px;
+pointer-events: none;
+}
+
+.formation-card:hover {
+transform: translateY(-18px) scale(1.03) rotate(-1deg);
+box-shadow: 16px 16px 0 #000;
+}
+
+/* Testimonial Enhanced */
+.testimonial {
+background: #FFF9E6;
+border: 5px solid #000;
+border-left: 12px solid #FFD93D;
+box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+transform: translateX(8px);
+box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Strikethrough Price Enhanced */
+.old-price {
+position: relative;
+}
+
+.old-price::after {
+content: '';
+position: absolute;
+left: -5%;
+top: 50%;
+width: 110%;
+height: 5px;
+background: #FF0000;
+transform: rotate(-10deg);
+}
+
+/* Urgency Banner Enhanced */
+.urgency {
+background: linear-gradient(135deg, #FF4444 0%, #FF8E53 100%);
+border: 5px solid #000;
+box-shadow: 8px 8px 0 #000;
+animation: pulse 2s ease-in-out infinite;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+transform: translateX(100%);
+transition: transform 0.3s ease;
+}
+
+.mobile-menu.active {
+transform: translateX(0);
+}
+
+/* Counter Enhanced */
+.counter {
+font-size: 4rem;
+font-weight: 900;
+background: linear-gradient(135deg, #FF6B9D 0%, #A855F7 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+}
+
+/* Shine Effect Enhanced */
+@keyframes shine {
+0% { left: -100%; }
+100% { left: 150%; }
+}
+
+.shine {
+position: relative;
+overflow: hidden;
+}
+
+.shine::after {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 50%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+animation: shine 3s infinite;
+transform: skewX(-25deg);
+}
+
+/* Success Checkmark */
+.checkmark {
+color: #6BCF7F;
+font-size: 1.5rem;
+}
+
+/* Trust Badge */
+.trust-badge {
+background: white;
+border: 4px solid #000;
+box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+padding: 1rem 1.5rem;
+border-radius: 20px;
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+font-weight: 800;
+}
+
+/* Cartoon Dots Background */
+.dots-bg {
+background-image: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+background-size: 20px 20px;
+}
+
+/* Premium Membership Card */
+.membership-card {
+background: linear-gradient(135deg, #A855F7 0%, #FF6B9D 100%);
+border: 6px solid #000;
+box-shadow: 12px 12px 0 #000;
+transition: all 0.5s ease;
+position: relative;
+overflow: hidden;
+}
+
+.membership-card::before {
+content: '👑';
+position: absolute;
+font-size: 15rem;
+opacity: 0.1;
+top: -30px;
+right: -30px;
+animation: float 6s ease-in-out infinite;
+}
+
+.membership-card:hover {
+transform: scale(1.05) rotate(-1deg);
+box-shadow: 16px 16px 0 #000;
+}
+
+/* Scrollbar Cartoon Style */
+::-webkit-scrollbar {
+width: 14px;
+}
+
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+border: 3px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+background: linear-gradient(135deg, #FF6B9D, #A855F7);
+border: 3px solid #000;
+border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: linear-gradient(135deg, #A855F7, #FF6B9D);
+}
+
+/* Science Section Styles */
+.science-carousel {
+display: flex;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+gap: 1.5rem;
+padding: 2rem 0;
+scrollbar-width: thin;
+scrollbar-color: #FF6B9D #f1f1f1;
+}
+
+.science-carousel::-webkit-scrollbar {
+height: 10px;
+}
+
+.science-carousel::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 10px;
+}
+
+.science-carousel::-webkit-scrollbar-thumb {
+background: linear-gradient(90deg, #FF6B9D, #A855F7);
+border-radius: 10px;
+}
+
+.science-card {
+min-width: 320px;
+max-width: 350px;
+scroll-snap-align: center;
+background: white;
+border: 5px solid #000;
+box-shadow: 8px 8px 0 #000;
+border-radius: 1.5rem;
+padding: 2rem;
+transition: all 0.3s ease;
+}
+
+.science-card:hover {
+transform: translateY(-10px);
+box-shadow: 12px 12px 0 #000;
+}
+
+.science-icon {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 2.5rem;
+border: 4px solid #000;
+margin-bottom: 1.5rem;
+}
+
+/* Certification badges */
+.cert-badge {
+background: linear-gradient(135deg, #6BCF7F 0%, #00D4FF 100%);
+border: 4px solid #000;
+box-shadow: 5px 5px 0 #000;
+padding: 0.5rem 1rem;
+border-radius: 50px;
+font-weight: 800;
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+font-size: 0.9rem;
+}
+
+/* Navigation arrows for carousel */
+.carousel-nav {
+display: flex;
+justify-content: center;
+gap: 1rem;
+margin-top: 2rem;
+}
+
+.carousel-arrow {
+background: linear-gradient(135deg, #FF6B9D 0%, #A855F7 100%);
+border: 4px solid #000;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 5px 5px 0 #000;
+}
+
+.carousel-arrow:hover {
+transform: scale(1.1);
+box-shadow: 7px 7px 0 #000;
+}
+
+.carousel-arrow:active {
+transform: scale(0.95);
+box-shadow: 3px 3px 0 #000;
+}
+</style>
+</head>
+<body class="text-gray-900">
+
+<!-- MEGA PROMO BANNER -->
+<div class="promo-banner text-white py-6 px-6 text-center overflow-hidden relative">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-center gap-3">
+<div class="flex items-center gap-3 flex-wrap justify-center">
+<span class="text-3xl md:text-4xl bounce-anim">🔥</span>
+<p class="text-xl md:text-3xl font-black uppercase">
+LANCEMENT SPÉCIAL : 3 FORMATIONS RÉVOLUTIONNAIRES À PRIX CASSÉ !
+</p>
+<span class="text-3xl md:text-4xl bounce-anim">🔥</span>
+</div>
+<p class="text-lg md:text-2xl font-bold">
+⏰ Plus que <span class="text-yellow-300 text-2xl md:text-3xl font-black pulse-anim">25 PLACES</span> disponibles à ce prix !
+</p>
+<button onclick="window.location.href='https://instanteats.gumroad.com/l/ofvjj/Membership30'" 
+class="bg-white text-pink-600 px-6 py-3 md:px-8 md:py-4 rounded-full text-lg md:text-2xl font-black border-4 border-black shadow-lg hover:scale-110 transition-transform mt-2">
+    JE FONCE ! 🚀
+</button>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Navigation -->
+<nav class="sticky top-0 z-40 bg-white border-b-5 border-black shadow-2xl">
+<div class="max-w-7xl mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="text-3xl md:text-4xl lg:text-5xl font-black">
+<span class="text-cartoon-pink">INSTANT</span>
+<span class="text-cartoon-purple">EATS</span>
+<span class="text-2xl md:text-3xl ml-2 bounce-anim">🍕</span>
+</div>
+</div>
+
+<!-- Desktop Menu -->
+<div class="hidden lg:flex items-center space-x-6">
+<a href="#formations" class="text-xl font-bold text-gray-700 hover:text-cartoon-pink transition-colors hover:scale-105 transform">🎓 Formations</a>
+<a href="#recettes" class="text-xl font-bold text-gray-700 hover:text-cartoon-pink transition-colors hover:scale-105 transform">🍳 Recettes</a>
+<a href="#science" class="text-xl font-bold text-gray-700 hover:text-cartoon-pink transition-colors hover:scale-105 transform">🔬 Science</a>
+<a href="#temoignages" class="text-xl font-bold text-gray-700 hover:text-cartoon-pink transition-colors hover:scale-105 transform">⭐ Témoignages</a>
+<a href="#membership" class="text-xl font-bold text-gray-700 hover:text-cartoon-pink transition-colors hover:scale-105 transform">👑 Membership</a>
+</div>
+
+<div class="flex items-center space-x-4">
+  <button onclick="window.location.href='https://instanteats.gumroad.com/l/ofvjj/Membership30'" 
+  class="mega-btn hidden lg:block px-6 py-3 rounded-full text-white">
+    REJOINDRE ! 🎯
+  </button>
+</div>
+</button>
+<button class="lg:hidden text-gray-700" onclick="document.getElementById('mobileMenu').classList.add('active')">
+<i class="fas fa-bars text-3xl"></i>
+</button>
+</div>
+</div>
+</div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-full h-full bg-white z-50 lg:hidden border-l-4 border-black">
+<div class="p-6">
+<div class="flex justify-between items-center mb-8">
+<div class="text-3xl font-black">
+<span class="text-cartoon-pink">INSTANT</span>
+<span class="text-cartoon-purple">EATS</span>
+</div>
+<button onclick="document.getElementById('mobileMenu').classList.remove('active')">
+<i class="fas fa-times text-3xl"></i>
+</button>
+</div>
+<div class="space-y-6">
+<a href="#formations" class="block text-2xl font-black text-gray-700" onclick="document.getElementById('mobileMenu').classList.remove('active')">🎓 Formations</a>
+<a href="#recettes" class="block text-2xl font-black text-gray-700" onclick="document.getElementById('mobileMenu').classList.remove('active')">🍳 Recettes</a>
+<a href="#science" class="block text-2xl font-black text-gray-700" onclick="document.getElementById('mobileMenu').classList.remove('active')">🔬 Science</a>
+<a href="#temoignages" class="block text-2xl font-black text-gray-700" onclick="document.getElementById('mobileMenu').classList.remove('active')">⭐ Témoignages</a>
+<a href="#membership" class="block text-2xl font-black text-gray-700" onclick="document.getElementById('mobileMenu').classList.remove('active')">👑 Membership</a>
+</div>
+</div>
+</div>
+
+<!-- Hero Section -->
+<section class="py-20 px-6 dots-bg">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<div class="mb-8">
+<span class="cartoon-badge text-xl md:text-2xl wiggle-anim">
+⚡ DÉJÀ 1400+ VIES TRANSFORMÉES
+</span>
+</div>
+<h1 class="text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-black mb-8 leading-tight">
+<span class="text-cartoon-purple">TRANSFORMEZ</span><br>
+<span class="text-cartoon-pink">VOTRE VIE</span><br>
+<span class="bg-gradient-to-r from-cartoon-blue via-cartoon-pink to-cartoon-purple bg-clip-text text-transparent">
+EN 30 JOURS ! 🚀
+</span>
+</h1>
+<p class="text-xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-6 leading-relaxed">
+Gagnez <span class="text-cartoon-pink text-3xl md:text-5xl">180 HEURES</span> par an,<br>
+Économisez l'équivalent d'<span class="text-cartoon-blue text-3xl md:text-5xl">1 iPhone 16 Pro</span>,<br>
+Devenez la <span class="text-cartoon-purple text-3xl md:text-5xl">MEILLEURE VERSION</span> de vous-même ! 💪
+</p>
+
+<!-- Trust Badges -->
+<div class="flex flex-wrap gap-4 justify-center mb-12">
+<div class="trust-badge">
+<i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+<span class="text-gray-900">Paiement 100% Sécurisé</span>
+</div>
+<div class="trust-badge">
+<i class="fas fa-medal text-yellow-600 text-2xl"></i>
+<span class="text-gray-900">Coachs Certifiés</span>
+</div>
+<div class="trust-badge">
+<i class="fas fa-check-circle text-green-600 text-2xl"></i>
+<span class="text-gray-900">Satisfait ou Remboursé</span>
+</div>
+</div>
+</div>
+
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+<div class="stats-box rounded-3xl p-8 text-center">
+<div class="text-6xl mb-3 float-anim">⭐</div>
+<div class="counter">4.9/5</div>
+<p class="text-xl font-bold text-gray-700 mt-2">Note moyenne</p>
+</div>
+<div class="stats-box rounded-3xl p-8 text-center">
+<div class="text-6xl mb-3 float-anim" style="animation-delay: -1s;">👥</div>
+<div class="counter">1400+</div>
+<p class="text-xl font-bold text-gray-700 mt-2">Membres actifs</p>
+</div>
+<div class="stats-box rounded-3xl p-8 text-center">
+<div class="text-6xl mb-3 float-anim" style="animation-delay: -2s;">⏰</div>
+<div class="counter">180h</div>
+<p class="text-xl font-bold text-gray-700 mt-2">Gagnées par an</p>
+</div>
+<div class="stats-box rounded-3xl p-8 text-center">
+<div class="text-6xl mb-3 float-anim" style="animation-delay: -3s;">🎯</div>
+<div class="counter">89%</div>
+<p class="text-xl font-bold text-gray-700 mt-2">Taux de réussite</p>
+</div>
+</div>
+
+<!-- CTA Buttons -->
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+  <button onclick="window.location.href='https://instanteats.gumroad.com/l/ofvjj/Membership30'" 
+  class="mega-btn px-8 py-4 md:px-12 md:py-6 rounded-full text-white w-full md:w-auto shine">
+    🚀 JE REJOINS FORGE !
+  </button>
+</button>
+<button onclick="window.location.href='#temoignages'" class="yellow-btn px-8 py-4 md:px-12 md:py-6 rounded-full text-gray-900 w-full md:w-auto">
+👀 VOIR RÉSULTATS
+</button>
+</div>
+</div>
+</section>
+
+<!-- Urgency Section -->
+<section class="py-16 px-6">
+<div class="max-w-5xl mx-auto">
+<div class="urgency rounded-3xl p-10 text-center text-white">
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<div class="text-6xl bounce-anim">⚠️</div>
+<div>
+<p class="text-2xl md:text-3xl lg:text-4xl font-black mb-2">ATTENTION : OFFRE ULTRA LIMITÉE !</p>
+<p class="text-lg md:text-xl lg:text-2xl font-bold">Plus que 25 places au prix de lancement. Ne ratez pas cette opportunité unique ! 🔥</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Formations Section -->
+<section id="formations" class="py-20 px-6 dots-bg">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<div class="mb-6">
+<span class="cartoon-badge text-xl md:text-2xl wiggle-anim">
+🎓 EN LANCEMENT - PRIX SPÉCIAL
+</span>
+</div>
+<h2 class="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6">
+LES 3 FORMATIONS QUI VONT<br>
+<span class="text-cartoon-pink">CHANGER VOTRE VIE ! 🎯</span>
+</h2>
+<p class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700">
+Normalement <span class="old-price text-gray-500">67€/mois</span> ➜ <span class="text-green-600">Aujourd'hui : 47€ dans FORGE Membership !</span>
+</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<!-- Formation 1: Finance -->
+<div class="formation-card rounded-3xl p-8">
+<div class="text-center mb-6">
+<div class="text-8xl mb-4 float-anim">💰</div>
+<h3 class="text-2xl md:text-3xl font-black text-cartoon-purple mb-3">FINANCE &<br>INVESTISSEMENT</h3>
+<div class="bg-green-400 text-white px-6 py-3 rounded-full inline-block font-black text-xl border-4 border-black mb-4">
+ INCLUS
+</div>
+</div>
+<div class="space-y-4 mb-6">
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Gérer son budget comme un MILLIARDAIRE 💎</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Techniques d'épargne qui FONCTIONNENT vraiment 📈</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Trading raisonnable (pas de casino !) 🎲</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Multiplier ses revenus intelligemment 🚀</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Atteindre la liberté financière 🏖️</p>
+</div>
+</div>
+<div class="bg-purple-100 rounded-2xl p-4 mb-6 border-4 border-purple-300">
+<p class="text-center text-lg font-black text-purple-900">
+📊 L'équivalent d'1 iPhone 16 Pro économisé/an !
+</p>
+</div>
+<button onclick="window.location.href='https://instanteats.gumroad.com/l/ofvjj/Membership30'" 
+class="mega-btn w-full py-4 md:py-5 rounded-full text-white">
+  J'ACCÈDE ! 💸
+</button>
+</button>
+</div>
+
+<!-- Formation 2: Nutrition -->
+<div class="formation-card rounded-3xl p-8 relative">
+<div class="absolute -top-4 -right-4 bg-red-500 text-white px-6 py-3 rounded-full font-black text-xl border-4 border-black rotate-12 pulse-anim">
+🔥 TOP 1
+</div>
+<div class="text-center mb-6">
+<div class="text-8xl mb-4 float-anim" style="animation-delay: -1s;">🥗</div>
+<h3 class="text-2xl md:text-3xl font-black text-cartoon-pink mb-3">NUTRITIONNISTE<br>PROFESSIONNEL</h3>
+<div class="bg-green-400 text-white px-6 py-3 rounded-full inline-block font-black text-xl border-4 border-black mb-4">
+ INCLUS
+</div>
+</div>
+<div class="space-y-4 mb-6">
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Santé optimale & énergie DÉBORDANTE ⚡</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Sommeil réparateur (enfin !) 😴</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Récupération ultra-rapide 🏃</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Confiance en soi DÉCUPLÉE 💪</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Prise de muscle facile (secrets révélés) 🦾</p>
+</div>
+</div>
+<div class="bg-pink-100 rounded-2xl p-4 mb-6 border-4 border-pink-300">
+<p class="text-center text-lg font-black text-pink-900">
+🎯 +42% d'amélioration nutritionnelle !
+</p>
+</div>
+<button onclick="window.location.href='https://instanteats.gumroad.com/l/ofvjj/Membership30'" 
+class="mega-btn w-full py-4 md:py-5 rounded-full text-white">
+  UNSTOPPABLE ! 💥
+</button>
+</button>
+</div>
+
+<!-- Formation 3: Sport -->
+<div class="formation-card rounded-3xl p-8">
+<div class="text-center mb-6">
+<div class="text-8xl mb-4 float-anim" style="animation-delay: -2s;">🏋️</div>
+<h3 class="text-2xl md:text-3xl font-black text-cartoon-blue mb-3">RENFORCEMENT<br>MUSCULAIRE</h3>
+<div class="bg-green-400 text-white px-6 py-3 rounded-full inline-block font-black text-xl border-4 border-black mb-4">
+ INCLUS
+</div>
+</div>
+<div class="space-y-4 mb-6">
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Se muscler sans se blesser (méthode pro) 🛡️</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Abdos visibles RAPIDEMENT 🔥</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Techniques validées scientifiquement 🔬</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Programme adapté à VOTRE niveau 📊</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="fas fa-check-circle checkmark mt-1"></i>
+<p class="text-lg font-bold text-gray-800">Résultats en 21 jours garantis ✅</p>
+</div>
+</div>
+<div class="bg-blue-100 rounded-2xl p-4 mb-6 border-4 border-blue-300">
+<p class="text-center text-lg font-black text-blue-900">
+💪 Transformez votre corps en 3 semaines !
+</p>
+</div>
+<button onclick="window.location.href='https://instanteats.gumroad.com/l/ofvjj/Membership30'" 
+class="mega-btn w-full py-4 md:py-5 rounded-full text-white">
+  JE ME TRANSFORME ! 🔥
+</button>
+</button>
+</div>
+</div>
+
+<!-- Mega Value Proposition -->
+<div class="cartoon-card bg-gradient-to-br from-yellow-100 to-orange-100 rounded-3xl p-10 text-center mb-12">
+<h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+🎁 VALEUR TOTALE : <span class="old-price text-gray-600">67€</span>
+</h3>
+<p class="text-2xl md:text-3xl lg:text-4xl font-black text-green-600 mb-6">
+AUJOURD'HUI : 47 € Tout inclus dans FORGE Membership ! 😱
+</p>
+<p class="text-xl md:text-2xl font-bold text-gray-700 mb-8">
+LIMITÉ ! Soit une économie INSANE de <span class="text-red-600 text-3xl md:text-4xl">20€</span> ! 🤯
+</p>
+<button onclick="window.location.href='https://instanteats.gumroad.com/l/ofvjj/Membership30'" 
+class="mega-btn px-10 py-4 md:px-16 md:py-6 rounded-full text-white shine">
+  JE REJOINS FORGE ! 🎯
+</button>
+</button>
+</div>
+</div>
+</section>
+
+<!-- Recettes Section -->
+<section id="recettes" class="py-20 px-6 dots-bg">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6">
+<span class="text-cartoon-orange">32 RECETTES PREMIUM</span> PAR MOIS ! 🍔
+</h2>
+<p class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700">
+Ultra évoluées, délicieuses, faciles à apprendre ! 🚀
+</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<!-- Recipe 1 -->
+<div class="cartoon-card rounded-3xl p-6 cursor-pointer">
+<div class="bg-gradient-to-br from-orange-400 to-red-500 h-56 rounded-2xl mb-6 flex items-center justify-center border-4 border-black">
+<div class="text-9xl bounce-anim">🍗</div>
+</div>
+<h3 class="text-2xl font-black text-gray-900 mb-3">Nuggets Street XXL 🔥</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-cartoon-blue text-white px-4 py-2 rounded-full font-bold text-sm border-2 border-black">⚡ 15 min</span>
+<span class="bg-cartoon-green text-white px-4 py-2 rounded-full font-bold text-sm border-2 border-black">👨‍🍳 Facile</span>
+<span class="bg-cartoon-pink text-white px-4 py-2 rounded-full font-bold text-sm border-2 border-black">💰 3€</span>
+</div>
+<button onclick="window.location.href='#membership'" class="yellow-btn w-full py-3 md:py-4 rounded-full text-gray-900">
+DÉBLOQUER ! 👀
+</button>
+</div>
+
+<!-- Recipe 2 -->
+<div class="cartoon-card rounded-3xl p-6 cursor-pointer">
+<div class="bg-gradient-to-br from-purple-400 to-pink-500 h-56 rounded-2xl mb-6 flex items-center justify-center border-4 border-black">
+<div class="text-9xl bounce-anim" style="animation-delay: -0.5s;">🍝</div>
+</div>
+<h3 class="text-2xl font-black text-gray-900 mb-3">Pâtes Crémeuses SPECIAL RESEAUX ✨</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-cartoon-blue text-white px-4 py-2 rounded-full font-bold text-sm border-2 border-black">⚡ 12 min</span>
+<span class="bg-cartoon-green text-white px-4 py-2 rounded-full font-bold text-sm border-2 border-black">👨‍🍳 Facile</span>
+<span class="bg-cartoon-pink text-white px-4 py-2 rounded-full font-bold text-sm border-2 border-black">💰 4€</span>
+</div>
+<button onclick="window.location.href='#membership'" class="yellow-btn w-full py-3 md:py-4 rounded-full text-gray-900">
+DÉBLOQUER ! 👀
+</button>
+</div>
+
+<!-- Recipe 3 -->
+<div class="cartoon-card rounded-3xl p-6 cursor-pointer">
+<div class="bg-gradient-to-br from-yellow-400 to-orange-500 h-56 rounded-2xl mb-6 flex items-center justify-center border-4 border-black">
+<div class="text-9xl bounce-anim" style="animation-delay: -1s;">🍔</div>
+</div>
+<h3 class="text-2xl font-black text-gray-900 mb-3">Burger Gastro Maison 👑</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-cartoon-blue text-white px-4 py-2 rounded-full font-bold text-sm border-2 border-black">⚡ 20 min</span>
+<span class="bg-cartoon-green text-white px-4 py-2 rounded-full font-bold text-sm border-2 border-black">👨‍🍳 Moyen</span>
+<span class="bg-cartoon-pink text-white px-4 py-2 rounded-full font-bold text-sm border-2 border-black">💰 6€</span>
+</div>
+<button onclick="window.location.href='#membership'" class="yellow-btn w-full py-3 md:py-4 rounded-full text-gray-900">
+DÉBLOQUER ! 👀
+</button>
+</div>
+</div>
+
+<div class="text-center">
+<p class="text-2xl md:text-3xl font-black text-gray-900 mb-6">
++ 100 AUTRES RECETTES PREMIUM INCROYABLES ! 🤤
+</p>
+<button onclick="window.location.href='#membership'" class="mega-btn px-8 py-4 md:px-12 md:py-6 rounded-full text-white shine">
+J'ACCÈDE AUX RECETTES ! 🍕
+</button>
+</div>
+</div>
+</section>
+
+<!-- Science Section - NEW! -->
+<section id="science" class="py-20 px-6 bg-gradient-to-br from-blue-50 to-green-50">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-12">
+<div class="mb-6">
+<span class="cartoon-badge text-xl md:text-2xl wiggle-anim">
+🔬 VALIDÉ PAR LA SCIENCE
+</span>
+</div>
+<h2 class="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6">
+D'APRÈS LA <span class="text-cartoon-blue">SCIENCE</span> 🧪
+</h2>
+<p class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 mb-8">
+Notre méthode repose sur des études scientifiques prouvées et des certifications reconnues
+</p>
+
+<!-- Certification Badges -->
+<div class="flex flex-wrap gap-4 justify-center mb-8">
+<div class="cert-badge">
+<i class="fas fa-certificate text-white text-xl"></i>
+<span class="text-gray-900">Coachs Certifiés France 🇫🇷</span>
+</div>
+<div class="cert-badge">
+<i class="fas fa-microscope text-white text-xl"></i>
+<span class="text-gray-900">Approuvé Scientifiquement</span>
+</div>
+<div class="cert-badge">
+<i class="fas fa-heart text-white text-xl"></i>
+<span class="text-gray-900">Bien-être Garanti</span>
+</div>
+</div>
+</div>
+
+<!-- Science Carousel -->
+<div class="science-carousel px-4" id="scienceCarousel">
+<!-- Card 1: Nutrition Science -->
+<div class="science-card">
+<div class="science-icon bg-gradient-to-br from-green-400 to-green-600">
+🥗
+</div>
+<h3 class="text-2xl font-black text-gray-900 mb-3">Nutrition Basée sur la Science</h3>
+<p class="text-gray-700 font-bold mb-4">
+Nos programmes nutritionnels sont élaborés selon les dernières études en nutrition sportive et santé métabolique.
+</p>
+<ul class="space-y-2 text-left">
+<li class="flex items-start gap-2">
+<span class="text-green-600 font-black">✓</span>
+<span class="text-sm font-semibold">Macro-nutriments optimisés pour la performance</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-green-600 font-black">✓</span>
+<span class="text-sm font-semibold">Index glycémique contrôlé pour l'énergie</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-green-600 font-black">✓</span>
+<span class="text-sm font-semibold">Timing nutritionnel scientifique</span>
+</li>
+</ul>
+<div class="mt-4 bg-green-100 rounded-lg p-3 border-2 border-green-300">
+<p class="text-sm font-black text-green-900">📚 Référence : Journal of Sports Nutrition</p>
+</div>
+</div>
+
+<!-- Card 2: Workout Science -->
+<div class="science-card">
+<div class="science-icon bg-gradient-to-br from-orange-400 to-red-600">
+💪
+</div>
+<h3 class="text-2xl font-black text-gray-900 mb-3">Entraînement Scientifique</h3>
+<p class="text-gray-700 font-bold mb-4">
+Méthodes d'entraînement validées par la recherche en physiologie de l'exercice pour des résultats optimaux.
+</p>
+<ul class="space-y-2 text-left">
+<li class="flex items-start gap-2">
+<span class="text-orange-600 font-black">✓</span>
+<span class="text-sm font-semibold">Principe de surcharge progressive</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-orange-600 font-black">✓</span>
+<span class="text-sm font-semibold">Récupération optimisée (48-72h)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-orange-600 font-black">✓</span>
+<span class="text-sm font-semibold">Prévention des blessures intégrée</span>
+</li>
+</ul>
+<div class="mt-4 bg-orange-100 rounded-lg p-3 border-2 border-orange-300">
+<p class="text-sm font-black text-orange-900">📚 Référence : American College of Sports Medicine</p>
+</div>
+</div>
+
+<!-- Card 3: Sleep Science -->
+<div class="science-card">
+<div class="science-icon bg-gradient-to-br from-purple-400 to-purple-600">
+😴
+</div>
+<h3 class="text-2xl font-black text-gray-900 mb-3">Sommeil & Récupération</h3>
+<p class="text-gray-700 font-bold mb-4">
+L'importance du sommeil sur la performance et la santé, basé sur les neurosciences modernes.
+</p>
+<ul class="space-y-2 text-left">
+<li class="flex items-start gap-2">
+<span class="text-purple-600 font-black">✓</span>
+<span class="text-sm font-semibold">7-9h de sommeil pour régénération optimale</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-purple-600 font-black">✓</span>
+<span class="text-sm font-semibold">Rythme circadien respecté</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-purple-600 font-black">✓</span>
+<span class="text-sm font-semibold">Qualité du sommeil = +30% performance</span>
+</li>
+</ul>
+<div class="mt-4 bg-purple-100 rounded-lg p-3 border-2 border-purple-300">
+<p class="text-sm font-black text-purple-900">📚 Référence : Sleep Research Society</p>
+</div>
+</div>
+
+<!-- Card 4: Mental Health -->
+<div class="science-card">
+<div class="science-icon bg-gradient-to-br from-pink-400 to-pink-600">
+🧠
+</div>
+<h3 class="text-2xl font-black text-gray-900 mb-3">Santé Mentale & Bien-être</h3>
+<p class="text-gray-700 font-bold mb-4">
+Approche holistique du bien-être mental basée sur la psychologie positive et les neurosciences.
+</p>
+<ul class="space-y-2 text-left">
+<li class="flex items-start gap-2">
+<span class="text-pink-600 font-black">✓</span>
+<span class="text-sm font-semibold">Réduction du stress de 40% (étude prouvée)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-pink-600 font-black">✓</span>
+<span class="text-sm font-semibold">Confiance en soi renforcée</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-pink-600 font-black">✓</span>
+<span class="text-sm font-semibold">Habitudes positives durables</span>
+</li>
+</ul>
+<div class="mt-4 bg-pink-100 rounded-lg p-3 border-2 border-pink-300">
+<p class="text-sm font-black text-pink-900">📚 Référence : Journal of Positive Psychology</p>
+</div>
+</div>
+
+<!-- Card 5: Financial Wellness -->
+<div class="science-card">
+<div class="science-icon bg-gradient-to-br from-yellow-400 to-yellow-600">
+💰
+</div>
+<h3 class="text-2xl font-black text-gray-900 mb-3">Finance Comportementale</h3>
+<p class="text-gray-700 font-bold mb-4">
+Principes économiques et psychologie financière pour une gestion d'argent intelligente et durable.
+</p>
+<ul class="space-y-2 text-left">
+<li class="flex items-start gap-2">
+<span class="text-yellow-600 font-black">✓</span>
+<span class="text-sm font-semibold">Règle 50/30/20 (épargne garantie)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-yellow-600 font-black">✓</span>
+<span class="text-sm font-semibold">Investissement à long terme (effet composé)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-yellow-600 font-black">✓</span>
+<span class="text-sm font-semibold">Économie moyenne : 1 iPhone/an 📱</span>
+</li>
+</ul>
+<div class="mt-4 bg-yellow-100 rounded-lg p-3 border-2 border-yellow-300">
+<p class="text-sm font-black text-yellow-900">📚 Référence : Behavioral Economics Research</p>
+</div>
+</div>
+
+<!-- Card 6: Time Management -->
+<div class="science-card">
+<div class="science-icon bg-gradient-to-br from-blue-400 to-blue-600">
+⏰
+</div>
+<h3 class="text-2xl font-black text-gray-900 mb-3">Gestion du Temps Efficace</h3>
+<p class="text-gray-700 font-bold mb-4">
+Techniques prouvées de productivité basées sur la science cognitive et la gestion du temps.
+</p>
+<ul class="space-y-2 text-left">
+<li class="flex items-start gap-2">
+<span class="text-blue-600 font-black">✓</span>
+<span class="text-sm font-semibold">Batch cooking : économie de 180h/an</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-blue-600 font-black">✓</span>
+<span class="text-sm font-semibold">Planification optimisée des repas</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-blue-600 font-black">✓</span>
+<span class="text-sm font-semibold">Plus de temps pour ce qui compte vraiment</span>
+</li>
+</ul>
+<div class="mt-4 bg-blue-100 rounded-lg p-3 border-2 border-blue-300">
+<p class="text-sm font-black text-blue-900">📚 Référence : Productivity Science Institute</p>
+</div>
+</div>
+</div>
+
+<!-- Carousel Navigation -->
+<div class="carousel-nav">
+<button class="carousel-arrow text-white" onclick="scrollCarousel('left')" aria-label="Précédent">
+<i class="fas fa-chevron-left text-2xl"></i>
+</button>
+<button class="carousel-arrow text-white" onclick="scrollCarousel('right')" aria-label="Suivant">
+<i class="fas fa-chevron-right text-2xl"></i>
+</button>
+</div>
+
+<!-- Why We're Different -->
+<div class="mt-16 max-w-4xl mx-auto">
+<div class="cartoon-card bg-white rounded-3xl p-8 md:p-12">
+<h3 class="text-3xl md:text-4xl font-black text-gray-900 mb-6 text-center">
+🏆 CE QUI NOUS DIFFÉRENCIE
+</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-6 border-4 border-green-400">
+<div class="text-4xl mb-3">✅</div>
+<h4 class="text-xl font-black text-gray-900 mb-2">100% Conforme</h4>
+<p class="text-gray-800 font-bold">Nous respectons toutes les réglementations françaises en matière de santé et nutrition.</p>
+</div>
+<div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-6 border-4 border-blue-400">
+<div class="text-4xl mb-3">🎓</div>
+<h4 class="text-xl font-black text-gray-900 mb-2">Coachs Certifiés</h4>
+<p class="text-gray-800 font-bold">Tous nos coachs sont diplômés et certifiés par des organismes reconnus en France.</p>
+</div>
+<div class="bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl p-6 border-4 border-purple-400">
+<div class="text-4xl mb-3">🔬</div>
+<h4 class="text-xl font-black text-gray-900 mb-2">Méthode Scientifique</h4>
+<p class="text-gray-800 font-bold">Chaque programme est basé sur des études scientifiques peer-reviewed et vérifiées.</p>
+</div>
+<div class="bg-gradient-to-br from-pink-100 to-pink-200 rounded-2xl p-6 border-4 border-pink-400">
+<div class="text-4xl mb-3">💚</div>
+<h4 class="text-xl font-black text-gray-900 mb-2">Bien-être d'abord</h4>
+<p class="text-gray-800 font-bold">Votre santé mentale et physique est notre priorité absolue, sans compromis.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Témoignages Section -->
+<section id="temoignages" class="py-20 px-6 bg-gradient-to-br from-blue-50 to-purple-50">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<div class="mb-6">
+<span class="cartoon-badge text-xl md:text-2xl wiggle-anim">
+⭐ ILS L'ONT FAIT, POURQUOI PAS VOUS ?
+</span>
+</div>
+<h2 class="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6">
+ILS SONT DÉJÀ<br>
+<span class="text-cartoon-purple">1400+ À SE TRANSFORMER ! 💬</span>
+</h2>
+</div>
+
+
+
+<!-- Testimonial 3 -->
+
+<!-- Social Proof -->
+<div class="mt-16 text-center">
+<div class="cartoon-card bg-white rounded-3xl p-10 inline-block">
+<p class="text-2xl md:text-3xl font-black text-gray-900 mb-4">
+📊 RÉSULTATS MOYENS DE NOS MEMBRES :
+</p>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
+<div>
+<div class="text-4xl md:text-5xl font-black text-cartoon-pink mb-2">94%</div>
+<p class="text-lg md:text-xl font-bold">Satisfaction</p>
+</div>
+<div>
+<div class="text-4xl md:text-5xl font-black text-cartoon-blue mb-2">180h</div>
+<p class="text-lg md:text-xl font-bold">Gagnées/an</p>
+</div>
+<div>
+<div class="text-4xl md:text-5xl font-black text-cartoon-purple mb-2">1📱</div>
+<p class="text-lg md:text-xl font-bold">iPhone 16 Pro économisé</p>
+</div>
+<div>
+<div class="text-4xl md:text-5xl font-black text-cartoon-green mb-2">89%</div>
+<p class="text-lg md:text-xl font-bold">Réussite</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FORGE Membership Section -->
+<section id="membership" class="py-20 px-6 bg-gradient-to-br from-purple-100 to-pink-100">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<div class="mb-6">
+<span class="cartoon-badge text-xl md:text-2xl wiggle-anim">
+👑 L'EXPÉRIENCE ULTIME
+</span>
+</div>
+<h2 class="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6">
+<span class="text-cartoon-purple">FORGE MEMBERSHIP</span><br>
+LA TRANSFORMATION TOTALE ! 💎
+</h2>
+<p class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700">
+Rejoignez l'élite et transformez votre vie dès aujourd'hui !
+</p>
+</div>
+
+<!-- FORGE Membership Card -->
+<div class="max-w-4xl mx-auto mb-16">
+<div class="membership-card rounded-3xl p-8 md:p-12 text-white relative">
+<div class="absolute -top-6 -right-6 bg-yellow-400 text-gray-900 px-6 py-3 md:px-8 md:py-4 rounded-full font-black text-xl md:text-2xl border-6 border-black rotate-12 pulse-anim">
+⭐ PROMO
+</div>
+<div class="text-center mb-8">
+<div class="text-6xl md:text-8xl mb-6 bounce-anim">👑</div>
+<h3 class="text-3xl md:text-4xl lg:text-5xl font-black mb-6">FORGE MEMBERSHIP</h3>
+<div class="mb-6">
+<p class="text-3xl md:text-4xl line-through opacity-70 mb-2">67€/mois</p>
+<div class="flex items-center justify-center gap-4 flex-wrap">
+<span class="text-5xl md:text-6xl lg:text-7xl font-black">47€</span>
+<div class="text-left">
+<p class="text-2xl md:text-3xl font-bold">/mois</p>
+<p class="text-base md:text-xl bg-green-400 text-gray-900 px-4 py-2 rounded-full font-black border-4 border-black inline-block">
+💚 ÉCONOMISEZ 20€/MOIS !
+</p>
+</div>
+</div>
+</div>
+<div class="bg-yellow-300 text-gray-900 px-6 py-3 md:px-8 md:py-4 rounded-full inline-block font-black text-xl md:text-2xl border-4 border-black mb-6">
+🔥 SEULEMENT 25 PLACES RESTANTES !
+</div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border-4 border-white/30">
+<h4 class="text-xl md:text-2xl font-black mb-4 flex items-center gap-3">
+<span class="text-3xl md:text-4xl">🎓</span>
+3 FORMATIONS COMPLÈTES
+</h4>
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-yellow-300 text-xl"></i>
+<p class="text-base md:text-lg font-bold">Finance & Investissement (INCLUS)</p>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-yellow-300 text-xl"></i>
+<p class="text-base md:text-lg font-bold">Nutritionniste Pro (INCLUS)</p>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-yellow-300 text-xl"></i>
+<p class="text-base md:text-lg font-bold">Renforcement Musculaire (INCLUS)</p>
+</div>
+</div>
+</div>
+
+<div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border-4 border-white/30">
+<h4 class="text-xl md:text-2xl font-black mb-4 flex items-center gap-3">
+<span class="text-3xl md:text-4xl">🍽️</span>
+32 RECETTES PREMIUM
+</h4>
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-yellow-300 text-xl"></i>
+<p class="text-base md:text-lg font-bold">Nouvelles recettes chaque mois</p>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-yellow-300 text-xl"></i>
+<p class="text-base md:text-lg font-bold">Très évoluées & faciles à apprendre</p>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-yellow-300 text-xl"></i>
+<p class="text-base md:text-lg font-bold">Contenu premium exclusif</p>
+</div>
+</div>
+</div>
+
+<div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border-4 border-white/30">
+<h4 class="text-xl md:text-2xl font-black mb-4 flex items-center gap-3">
+<span class="text-3xl md:text-4xl">🎯</span>
+SUIVI PERSONNALISÉ
+</h4>
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-yellow-300 text-xl"></i>
+<p class="text-base md:text-lg font-bold">Coachs certifiés en France 🇫🇷</p>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-yellow-300 text-xl"></i>
+<p class="text-base md:text-lg font-bold">Support VIP prioritaire</p>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-yellow-300 text-xl"></i>
+<p class="text-base md:text-lg font-bold">Réponses rapides garanties</p>
+</div>
+</div>
+</div>
+
+<div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border-4 border-white/30">
+<h4 class="text-xl md:text-2xl font-black mb-4 flex items-center gap-3">
+<span class="text-3xl md:text-4xl">🏆</span>
+CHALLENGE MENSUEL
+</h4>
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-yellow-300 text-xl"></i>
+<p class="text-base md:text-lg font-bold">Se renouvelle chaque mois</p>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-yellow-300 text-xl"></i>
+<p class="text-base md:text-lg font-bold">Récompenses exclusives</p>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-yellow-300 text-xl"></i>
+<p class="text-base md:text-lg font-bold">Motivation & communauté</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="bg-white/30 backdrop-blur-sm rounded-2xl p-6 border-4 border-white mb-8">
+<p class="text-center text-xl md:text-2xl font-black text-white">
+🎁 VALEUR TOTALE : <span class="old-price">67€/mois</span> ➜ SEULEMENT 47€/mois !
+<span class="text-yellow-300">Économie de 20€/mois !</span>
+</p>
+</div>
+
+<button onclick="window.location.href='https://instanteats.gumroad.com/l/ofvjj/Membership30'" 
+class="bg-gradient-to-r from-yellow-400 to-orange-500 border-6 border-black font-black text-xl md:text-2xl lg:text-3xl w-full py-6 md:py-8 rounded-full text-gray-900 hover:scale-105 transition-all shadow-2xl shine">
+  🚀 JE REJOINS FORGE MAINTENANT ! 👑
+</button>
+
+<p class="text-center text-base md:text-lg font-bold mt-6">
+💚 Résiliation sous 14 jours - Satisfaction garantie ou remboursé !
+</p>
+</div>
+</div>
+
+<!-- Guarantee -->
+<div class="cartoon-card bg-green-100 rounded-3xl p-10 text-center border-4 border-green-500">
+<div class="text-6xl md:text-8xl mb-6 bounce-anim">✅</div>
+<h3 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">GARANTIE SATISFAIT OU REMBOURSÉ !</h3>
+<p class="text-xl md:text-2xl font-bold text-gray-700 mb-6">
+Vous avez <span class="text-green-600 text-2xl md:text-3xl">14 JOURS</span> pour tester. Si vous n'êtes pas 100% satisfait, on vous rembourse intégralement. ZÉRO RISQUE ! 💚
+</p>
+<p class="text-lg md:text-xl font-bold text-gray-600">
++ de 1400 membres nous font confiance. Rejoignez FORGE maintenant ! 🚀
+</p>
+</div>
+</div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-20 px-6 dots-bg">
+<div class="max-w-5xl mx-auto text-center">
+<div class="cartoon-card bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl p-12">
+<h2 class="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6">
+PRÊT À REJOINDRE<br>
+<span class="text-cartoon-purple">FORGE</span> ? 🚀
+</h2>
+<p class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 mb-8">
+Rejoignez les <span class="text-cartoon-pink text-3xl md:text-4xl">1400+</span> personnes qui ont déjà fait le choix de la transformation ! 💪
+</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+  <button onclick="window.location.href='https://instanteats.gumroad.com/l/ofvjj/Membership30'" 
+  class="mega-btn px-8 py-4 md:px-12 md:py-6 rounded-full text-white w-full md:w-auto shine">
+    OUI, JE REJOINS ! 🔥
+  </button>
+</div>
+</button>
+<button onclick="window.location.href='#formations'" class="yellow-btn px-8 py-4 md:px-12 md:py-6 rounded-full text-gray-900 w-full md:w-auto">
+  </p>
+VOIR FORMATIONS 🎓
+</button>
+</div>
+<p class="text-base md:text-lg font-bold text-gray-600 mt-8">
+⚡ Plus que 25 places au prix de lancement ⚡
+</p>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-16 px-6 border-t-8 border-cartoon-pink">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div>
+<div class="text-3xl md:text-4xl font-black mb-6">
+<span class="text-cartoon-pink">INSTANT</span>
+<span class="text-cartoon-purple">EATS</span>
+<span class="text-2xl md:text-3xl ml-2 bounce-anim">🍕</span>
+</div>
+<p class="text-base md:text-lg leading-relaxed">
+Transformez votre vie en 30 jours avec FORGE Membership. 180h gagnées, 1 iPhone économisé, résultats garantis ! 🚀
+</p>
+</div>
+<div>
+<h4 class="text-xl md:text-2xl font-black mb-6 text-cartoon-yellow">Navigation</h4>
+<div class="space-y-3">
+<a href="#formations" class="block text-base md:text-lg hover:text-cartoon-pink transition-colors">🎓 Formations</a>
+<a href="#recettes" class="block text-base md:text-lg hover:text-cartoon-pink transition-colors">🍳 Recettes</a>
+<a href="#science" class="block text-base md:text-lg hover:text-cartoon-pink transition-colors">🔬 Science</a>
+<a href="#temoignages" class="block text-base md:text-lg hover:text-cartoon-pink transition-colors">⭐ Témoignages</a>
+<a href="#membership" class="block text-base md:text-lg hover:text-cartoon-pink transition-colors">👑 FORGE Membership</a>
+</div>
+</div>
+<div>
+<h4 class="text-xl md:text-2xl font-black mb-6 text-cartoon-yellow">Ressources</h4>
+<div class="space-y-3">
+<a href="https://instant-eats-mention-legale-m71v5jaqh-toiniu2000s-projects.vercel.app/" target="_blank" class="block text-base md:text-lg hover:text-cartoon-pink transition-colors">Mentions légales</a>
+<a href="https://instant-eats-politique-de-confidentialit-kfso-jai5ezuzx.vercel.app/" target="_blank" class="block text-base md:text-lg hover:text-cartoon-pink transition-colors">Politique de confidentialité</a>
+<a href="https://instant-eats-contact-hx9w7n5im-toiniu2000s-projects.vercel.app/" class="block text-base md:text-lg hover:text-cartoon-pink transition-colors">Contact</a>
+<a href="https://instant-eats-conditions-generales-de-vente-m2sjnqywb.vercel.app/" class="block text-base md:text-lg hover:text-cartoon-pink transition-colors">CGV</a>
+<a href="https://instant-eats-section-faq.vercel.app/" class="block text-base md:text-lg hover:text-cartoon-pink transition-colors">Aide & Infos</a>
+</div>
+</div>
+<div>
+<h4 class="text-xl md:text-2xl font-black mb-6 text-cartoon-yellow">Suivez-nous 📱</h4>
+<div class="flex gap-4">
+<a href="https://www.tiktok.com/@instant.eatss?_t=ZN-90trrNwwLw68&_r=1" target="_blank" class="w-14 h-14 bg-cartoon-pink hover:bg-cartoon-purple rounded-full flex items-center justify-center transition-all border-4 border-white hover:scale-110">
+<i class="fab fa-tiktok text-2xl"></i>
+</a>
+<a href="https://www.instagram.com/instant_eats_?igsh=cTRkbWo2dTU5dHU%3D&utm_source=gr" target="_blank" class="w-14 h-14 bg-cartoon-pink hover:bg-cartoon-purple rounded-full flex items-center justify-center transition-all border-4 border-white hover:scale-110">
+<i class="fab fa-instagram text-2xl"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=61578876662872" target="_blank" class="w-14 h-14 bg-cartoon-pink hover:bg-cartoon-purple rounded-full flex items-center justify-center transition-all border-4 border-white hover:scale-110">
+<i class="fab fa-facebook-f text-2xl"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t-4 border-gray-700 pt-8 text-center">
+<p class="text-base md:text-lg font-bold">&copy; 2025 INSTANT EATS. Tous droits réservés. Fait avec 💜 en France 🇫🇷</p>
+</div>
+</div>
+</footer>
+
+<script>
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+document.getElementById('mobileMenu').classList.remove('active');
+}
+});
+});
+
+// Counter animation
+const animateCounter = (element, target) => {
+let current = 0;
+const increment = target / 100;
+const timer = setInterval(() => {
+current += increment;
+if (current >= target) {
+element.textContent = target;
+clearInterval(timer);
+} else {
+element.textContent = Math.floor(current);
+}
+}, 20);
+};
+
+// Intersection Observer for animations
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.style.opacity = '1';
+entry.target.style.transform = 'translateY(0)';
+}
+});
+}, observerOptions);
+
+// Dark mode support
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+document.documentElement.classList.add('dark');
+}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+if (event.matches) {
+document.documentElement.classList.add('dark');
+} else {
+document.documentElement.classList.remove('dark');
+}
+});
+
+// Carousel scroll function
+function scrollCarousel(direction) {
+const carousel = document.getElementById('scienceCarousel');
+const scrollAmount = 370; // Card width + gap
+if (direction === 'left') {
+carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+} else {
+carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
+}
+
+// Auto-scroll carousel on mobile (optional)
+let autoScrollInterval;
+const startAutoScroll = () => {
+const carousel = document.getElementById('scienceCarousel');
+if (window.innerWidth < 768) {
+autoScrollInterval = setInterval(() => {
+if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+carousel.scrollTo({ left: 0, behavior: 'smooth' });
+} else {
+carousel.scrollBy({ left: 370, behavior: 'smooth' });
+}
+}, 5000);
+}
+};
+
+// Stop auto-scroll when user interacts
+document.getElementById('scienceCarousel').addEventListener('touchstart', () => {
+clearInterval(autoScrollInterval);
+});
+
+// Start auto-scroll on load
+window.addEventListener('load', startAutoScroll);
+</script>
+
+</body>
+</html>
